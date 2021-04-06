@@ -1,9 +1,17 @@
-html {
-  min-height: 100%;
+body {
+  min-height: 97vh;
   background-image: url("https://picsum.photos/600");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+main {
+  min-height: 97vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
 
 .responsive-img {
@@ -12,19 +20,17 @@ html {
   height: auto;
 }
 
-div {
-  border: 1px solid black;
+section {
+  border: 1px dashed black;
   border-radius: 1rem;
   min-height: 10rem;
-  min-width: 10rem;
-  max-width: 40rem;
+  min-width: 40rem;
+  max-width: 60rem;
   text-align: center;
-  margin: auto;
   background-color: white;
-  opacity: 0.7;
 }
 
-#number {
+input {
   height: 5%;
   border-radius: 1rem;
   max-width: 15rem;
@@ -52,17 +58,6 @@ button {
   min-width: 5rem;
   min-width: 10rem;
   margin: 1rem auto;
-}
-
-#resultmessages {
-  border-radius: 1rem;
-  min-height: 10rem;
-  min-width: 10rem;
-  max-width: 40rem;
-  margin: auto;
-  margin: auto;
-  background-color: white;
-  opacity: 0.7;
 }
 
 h2 {

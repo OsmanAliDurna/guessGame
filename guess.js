@@ -58,12 +58,16 @@ infoMessage.innerHTML = "Please enter a Number Over There!";
 ////////////////////////////////////////////////////////
 
 const colorful = guessText.textContent.trim();
+function colorfulText(text = "") {
+  const r = Math.trunc(Math.random() * 255);
+  const g = Math.trunc(Math.random() * 255);
+  const b = Math.trunc(Math.random() * 255);
+  return (text.style.color = `rgb(${r},${g},${b})`);
+}
 
-const r = Math.trunc(Math.random() * 255);
-const g = Math.trunc(Math.random() * 255);
-const b = Math.trunc(Math.random() * 255);
-
-guessText.style.backgroundColor = `rgb(${r},${g},${b})`;
+colorfulText(guessText);
+colorfulText(infoMessage);
+colorfulText(attemptCount);
 
 ////////////////////////////////////////////////////////
 

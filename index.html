@@ -8,23 +8,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="container">
-      <label for="number"> Guess Number </label>
-      <input
-        id="number"
-        type="text"
-        name="number"
-        onkeypress="return isNumberKey(event)"
-      />
-      <button id="guess">Let's Start</button>
-    </div>
+    <main>
+      <section id="container">
+        <label for="number"> Guess Number </label>
+        <input
+          id="number"
+          type="text"
+          name="number"
+          onkeypress="return isNumberKey(event)"
+        />
+        <button id="guess">Let's Start</button>
+      </section>
 
-    <br /><br /><br /><br /><br /><br />
+      <section id="resultmessages">
+        <h2 id="message"></h2>
+        <h5 id="attemptcount"></h5>
+      </section>
+    </main>
 
-    <div id="resultmessages">
-      <h2 id="message"></h2>
-      <h5 id="attemptcount"></h5>
-    </div>
     <script src="guess.js"></script>
   </body>
 </html>
