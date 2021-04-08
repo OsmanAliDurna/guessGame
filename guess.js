@@ -27,10 +27,12 @@ function isNumberKey(evt) {
     compare();
   }
   if (charCode < 48 || charCode > 57) return false;
-  if (inputNumber.value.length > 1) {
+  if (inputNumber.value.length >= 2) {
     inputNumber.value = 100;
     return false;
   }
+  setTimeout(() => (inputNumber.value = parseInt(inputNumber.value)), 10);
+
   return true;
 }
 
@@ -74,7 +76,14 @@ colorfulText(attemptCount);
 function compare() {
   let userGuess = parseInt(inputNumber.value);
 
-  if (inputNumber.value == "") {
+  if (inputNumber.value < 0 || inputNumber.value > 100) {
+    infoMessage.innerHTML = "Sorry, bro! You are trying to trolling.";
+    guessButton.disabled = true;
+    inputNumber.disabled = true;
+    inputNumber.value = "";
+    guessButton.textContent = "This Turn Finished";
+    timer();
+  } else if (inputNumber.value == "") {
     infoMessage.innerHTML = "Hey, I think you miss something ?";
   } else if (lastSelected == 1 && userGuess <= lastGuess && lastGuess >= 0) {
     infoMessage.innerHTML =
