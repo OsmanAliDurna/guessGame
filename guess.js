@@ -76,7 +76,11 @@ colorfulText(attemptCount);
 function compare() {
   let userGuess = parseInt(inputNumber.value);
 
-  if (inputNumber.value < 0 || inputNumber.value > 100) {
+  if (
+    inputNumber.value < 0 ||
+    inputNumber.value > 100 ||
+    inputNumber.value.match(/[^0-9]/i)
+  ) {
     infoMessage.innerHTML = "Sorry, bro! You are trying to trolling.";
     guessButton.disabled = true;
     inputNumber.disabled = true;
